@@ -1,0 +1,25 @@
+function setLang(lang) {
+  document.querySelectorAll('[data-lang]').forEach(el => {
+    el.classList.add('lang-hidden');
+  });
+
+  document.querySelectorAll(`[data-lang="${lang}"]`).forEach(el => {
+    el.classList.remove('lang-hidden');
+  });
+
+  // Save in URL
+  history.replaceState(null, null, '#lang=' + lang);
+}
+
+// Auto-detect
+(function() {
+  const hash = location.hash.replace('#lang=', '');
+  if (['pt', 'en', 'es'].includes(hash)) {
+    setLang(hash);
+  } else {
+    const nav = navigator.language || 'pt-BR';
+    if (nav.startsWith('en')) setLang('en');
+    else if (nav.startsWith('es')) setLang('es');
+    else setLang('pt');
+  }
+})();
