@@ -1,0 +1,103 @@
+:root {
+  --bg: #ffffff;
+  --accent: #0B3D2E;
+  --gold: #C9A44A;
+  --muted: #666;
+  --maxw: 1100px;
+  --radius: 10px;
+  --pad: 24px;
+  font-family: "Inter", Arial, sans-serif;
+}
+
+body {
+  background: var(--bg);
+  color: #111;
+  margin: 0;
+  padding: 0;
+}
+
+.wrapper {
+  max-width: var(--maxw);
+  margin: auto;
+  padding: var(--pad);
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  align-items: center;
+}
+
+.brand h1 {
+  margin: 0;
+  font-size: 32px;
+  color: var(--accent);
+}
+
+.nav {
+  display: flex;
+  gap: 16px;
+}
+
+.nav a {
+  text-decoration: none;
+  color: var(--muted);
+  font-size: 15px;
+}
+
+.langs button {
+  background: #fff;
+  border: 1px solid #ddd;
+  padding: 6px 10px;
+  cursor: pointer;
+  border-radius: 6px;
+}
+
+.hero {
+  margin-top: 32px;
+  padding: 32px;
+  background: linear-gradient(180deg, #f7f7f7, #fff);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.07);
+  border-radius: var(--radius);
+}
+
+.section-title {
+  font-size: 22px;
+  margin-top: 40px;
+  color: var(--accent);
+}
+
+.card {
+  background: #fff;
+  border: 1px solid #eee;
+  padding: 18px;
+  border-radius: var(--radius);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  gap: 20px;
+}
+
+.cta {
+  background: var(--accent);
+  color: #fff;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.footer {
+  margin-top: 40px;
+  padding: 20px;
+  border-top: 1px solid #eee;
+  color: var(--muted);
+  text-align: center;
+}
+
+.lang-hidden {
+  display: none;
+}
